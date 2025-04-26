@@ -5,7 +5,7 @@ Helper for general config
 import logging
 
 from .. import DOMAIN
-from ..const import CONF_DEVICE_CID, CONF_DEVICE_ID, CONF_TYPE
+from ..const import CONF_DEVICE_CID, CONF_DEVICE_ID, CONF_TYPE, CONF_MATTER_COVER
 from .device_config import get_config
 
 _LOGGER = logging.getLogger(__name__)
@@ -15,6 +15,8 @@ async def async_tuya_setup_platform(
     hass, async_add_entities, discovery_info, platform, entity_class
 ):
     """Common functions for async_setup_platform for each entity platform."""
+    from ..cover import TuyaLocalCover
+
     data = hass.data[DOMAIN][get_device_id(discovery_info)]
     device = data["device"]
     entities = []
@@ -23,12 +25,16 @@ async def async_tuya_setup_platform(
         get_config,
         discovery_info[CONF_TYPE],
     )
+
     if cfg is None:
         raise ValueError(f"No device config found for {discovery_info}")
     for ecfg in cfg.all_entities():
         if ecfg.entity == platform:
             try:
-                data[ecfg.config_id] = entity_class(device, ecfg)
+                if entity_class is TuyaLocalCover:
+                    data[ecfg.config_id] = entity_class(device, ecfg, discovery_info.get(CONF_MATTER_COVER, False))
+                else:
+                    data[ecfg.config_id] = entity_class(device, ecfg)
                 entities.append(data[ecfg.config_id])
                 if ecfg.deprecated:
                     _LOGGER.warning(ecfg.deprecation_message)

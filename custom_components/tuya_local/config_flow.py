@@ -36,6 +36,7 @@ from .const import (
     CONF_TYPE,
     CONF_USER_CODE,
     DATA_STORE,
+    CONF_MATTER_COVER,
 )
 from .device import TuyaLocalDevice
 from .helpers.config import get_device_id
@@ -375,11 +376,15 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
     async def async_step_select_type(self, user_input=None):
         if user_input is not None:
             self.data[CONF_TYPE] = user_input[CONF_TYPE]
+            self.data[CONF_MATTER_COVER] = user_input.get(CONF_MATTER_COVER, False)
+
+            _LOGGER.debug("Choose matter cover ? " + str(user_input.get(CONF_MATTER_COVER, False)))
             return await self.async_step_choose_entities()
 
         types = []
         best_match = 0
         best_matching_type = None
+        best_matching = None
 
         for type in await self.device.async_possible_types():
             types.append(type.config_type)
@@ -390,6 +395,7 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
             if q > best_match:
                 best_match = q
                 best_matching_type = type.config_type
+                best_matching = type
 
         best_match = int(best_match)
         dps = self.device._get_cached_state()
@@ -428,19 +434,54 @@ class ConfigFlowHandler(ConfigFlow, domain=DOMAIN):
             "Include the previous log messages with any new device request to https://github.com/make-all/tuya-local/issues/",
         )
         if types:
-            return self.async_show_form(
-                step_id="select_type",
-                data_schema=vol.Schema(
+            if self._check_config_is_cover_stateless(best_matching):
+                data_schema = vol.Schema(
+                    {
+                        vol.Required(
+                            CONF_TYPE,
+                            default=best_matching_type,
+                        ): vol.In(types),
+                        vol.Optional(
+                            CONF_MATTER_COVER,
+                            default=False,
+                        ): bool,
+                    }
+                )
+            else:
+                data_schema = vol.Schema(
                     {
                         vol.Required(
                             CONF_TYPE,
                             default=best_matching_type,
                         ): vol.In(types),
                     }
-                ),
+                )
+
+            return self.async_show_form(
+                step_id="select_type",
+                data_schema=data_schema,
             )
         else:
             return self.async_abort(reason="not_supported")
+
+
+    @staticmethod
+    def _check_config_is_cover_stateless(type):
+        """Check if the selected device config is a cover without any dp's information about
+        the state of the cover. To work with Matter, the cover must implement percentage position"""
+
+        if type is None:
+            return False
+
+        for tuya_entity in type.all_entities():
+            tuya_entity_type = tuya_entity.entity
+
+            if tuya_entity_type == "cover":
+                if tuya_entity.find_dps("position") is None:
+                    return True
+
+        return False
+
 
     async def async_step_choose_entities(self, user_input=None):
         if user_input is not None:

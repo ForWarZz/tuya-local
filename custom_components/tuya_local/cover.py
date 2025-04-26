@@ -36,12 +36,13 @@ async def async_setup_entry(hass, config_entry, async_add_entities):
 class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
     """Representation of a Tuya Cover Entity."""
 
-    def __init__(self, device: TuyaLocalDevice, config: TuyaEntityConfig):
+    def __init__(self, device: TuyaLocalDevice, config: TuyaEntityConfig, matter=False):
         """
         Initialise the cover device.
         Args:
           device (TuyaLocalDevice): The device API instance
           config (TuyaEntityConfig): The entity config
+          matter (bool): Whether you need to use Matter
         """
         super().__init__()
         dps_map = self._init_begin(device, config)
@@ -54,7 +55,7 @@ class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
         self._init_end(dps_map)
 
         self._support_flags = CoverEntityFeature(0)
-        if self._position_dp:
+        if self._position_dp or matter:
             self._support_flags |= CoverEntityFeature.SET_POSITION
         if self._control_dp:
             if "stop" in self._control_dp.values(self._device):
@@ -65,6 +66,10 @@ class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
                 self._support_flags |= CoverEntityFeature.CLOSE
         if self._tiltpos_dp:
             self._support_flags |= CoverEntityFeature.SET_TILT_POSITION
+            
+        # If matter support is needed
+        self._matter_needs = matter
+        _LOGGER.debug("Matter needed ? " + str(self._matter_needs))
 
         # Open/close/stop tilt not yet supported, as no test devices known
 
@@ -100,6 +105,9 @@ class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
     @property
     def current_cover_position(self):
         """Return current position of cover."""
+        if self._matter_needs:
+            return 50
+
         if self._currentpos_dp:
             pos = self._currentpos_dp.get_value(self._device)
             if pos is not None:
@@ -134,6 +142,9 @@ class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
         """Return the current state of the cover if it can be determined,
         or None if it is inconclusive.
         """
+        if self._matter_needs:
+            return "opened"
+
         if self._action_dp:
             action = self._action_dp.get_value(self._device)
             if action in ["opening", "closing", "opened", "closed"]:
@@ -219,6 +230,17 @@ class TuyaLocalCover(TuyaLocalEntity, CoverEntity):
         """Set the cover to a specific position."""
         if position is None:
             raise AttributeError()
+
+        # If cover is stateless but Matter needed, fake state to make it work
+        if self._matter_needs:
+            if position > 50:
+                await self.async_open_cover(**kwargs)
+            elif position < 50:
+                await self.async_close_cover(**kwargs)
+            else:
+                await self.async_stop_cover(**kwargs)
+            return
+
         if self._position_dp:
             await self._position_dp.async_set_value(self._device, position)
         else:
