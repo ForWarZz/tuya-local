@@ -496,6 +496,7 @@
                             "sleep": "Dorm",
                             "smart": "Intel·ligent",
                             "strong": "Fort",
+                            "custom": "Personalitzat",
                             "high": "Alt",
                             "medium": "Mitjà",
                             "low": "Baix",
@@ -634,6 +635,9 @@
                 "state": {
                     "cancel": "Cancel·la",
                     "continuous": "Continu",
+                    "30s": "30 segons",
+                    "1m": "1 minut",
+                    "2m": "2 minuts",
                     "5m": "5 minuts",
                     "10m": "10 minuts",
                     "20m": "20 minuts",
@@ -753,6 +757,25 @@
         "text": {
             "scene": {
                 "name": "Escena"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Escalfador d'aigua",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Escalfament",
+                            "cool": "Refredament",
+                            "auto": "Automàtic",
+                            "off": "Apagat",
+                            "hotwater": "Aigua calenta",
+                            "hotwater_cool": "Aigua calenta i refredament",
+                            "hotwater_heat": "Aigua calenta i escalfament",
+                            "hotwater_auto": "Aigua calenta i automàtic"
+                        }
+                    }
+                }
             }
         }
     }

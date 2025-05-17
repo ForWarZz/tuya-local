@@ -340,6 +340,7 @@
                             "fresh": "Fresco",
                             "smart": "Inteligente",
                             "strong": "Fuerte",
+                            "custom": "Personalizado",
                             "high": "Alto",
                             "medium": "Medio",
                             "low": "Bajo",
@@ -504,6 +505,9 @@
                 "state": {
                     "cancel": "Cancelar",
                     "continuous": "Continuo",
+                    "30s": "30 segundos",
+                    "1m": "1 minuto",
+                    "2m": "2 minutos",
                     "5m": "5 minutos",
                     "10m": "10 minutos",
                     "20m": "20 minutos",
@@ -753,6 +757,25 @@
         "text": {
             "scene": {
                 "name": "Escena"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Calentador de agua",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Calor",
+                            "cool": "Frío",
+                            "auto": "Automático",
+                            "off": "Apagar",
+                            "hotwater": "Agua caliente",
+                            "hotwater_cool": "Agua caliente y frío",
+                            "hotwater_heat": "Agua caliente y calor",
+                            "hotwater_auto": "Agua caliente y automático"
+                        }
+                    }
+                }
             }
         }
     }

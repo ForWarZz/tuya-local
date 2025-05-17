@@ -341,6 +341,7 @@
                             "fresh": "Friss",
                             "smart": "Okos",
                             "strong": "Erős",
+                            "custom": "Egyéni",
                             "high": "Magas",
                             "medium": "Közepes",
                             "low": "Alacsony",
@@ -505,6 +506,9 @@
                 "state": {
                     "cancel": "Mégse",
                     "continuous": "Folyamatos",
+                    "30s": "30 másodperc",
+                    "1m": "1 perc",
+                    "2m": "2 perc",
                     "5m": "5 perc",
                     "10m": "10 perc",
                     "20m": "20 perc",
@@ -754,6 +758,25 @@
         "text": {
             "scene": {
                 "name": "Jelenet"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Vízmelegítő",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Fűtés",
+                            "cool": "Hűtés",
+                            "auto": "Auto",
+                            "off": "Ki",
+                            "hotwater": "Meleg víz",
+                            "hotwater_cool": "Meleg víz és hűtés",
+                            "hotwater_heat": "Meleg víz és fűtés",
+                            "hotwater_auto": "Meleg víz és automatikus"
+                        }
+                    }
+                }
             }
         }
     }

@@ -339,6 +339,7 @@
                             "fresh": "Frisch",
                             "smart": "Intelligent",
                             "strong": "Stark",
+                            "custom": "Benutzerdefiniert",
                             "high": "Hoch",
                             "medium": "Mittel",
                             "low": "Niedrig",
@@ -503,6 +504,9 @@
                 "state": {
                     "cancel": "Abbrechen",
                     "continuous": "Dauerbetrieb",
+                    "30s": "30 Sekunden",
+                    "1m": "1 Minute",
+                    "2m": "2 Minuten",
                     "5m": "5 Minuten",
                     "10m": "10 Minuten",
                     "20m": "20 Minuten",
@@ -753,6 +757,25 @@
         "text": {
             "scene": {
                 "name": "Szene"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Wasserkocher",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Heizen",
+                            "cool": "Kühlen",
+                            "auto": "Auto",
+                            "off": "Aus",
+                            "hotwater": "Warmwasser",
+                            "hotwater_cool": "Warmwasser Kühlen",
+                            "hotwater_heat": "Warmwasser Heizen",
+                            "hotwater_auto": "Warmwasser Auto"
+                        }
+                    }
+                }
             }
         }
     }

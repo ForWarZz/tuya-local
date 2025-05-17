@@ -146,7 +146,7 @@ Further device support has been made with the assistance of users. Please consid
 - [billxinli](https://github.com/billxinli) for contributing support for Honeywell TP dehumidifiers.
 - [isarib01](https://github.com/isarib01) for assistance supporting Deta motion sensor lights.
 - [iDontWantAUsername](https://github.com/iDontWantAUsername) for assistance supporting Grid Connect USB charger with power socket.
-- [engusz](https://github.com/engusz) for assistance supporting Avatto curtain switches and dual switch with timers.
+- [engusz](https://github.com/engusz) for assistance supporting Avatto CL02 curtain switches and dual switch with timers.
 - [81k5](https://github.com/81k5) for assistance supporting Aubess smart switches.
 - [SvenMartin81](https://github.com/SvenMartin81) for assistance supporting another variant of common smartplug (via GNCC branded one)
 - [cjones813](https://github.com/cjones813) for assistance supporting HJZ radiator, and contributing Benexmart blinds support.
@@ -861,7 +861,7 @@ Further device support has been made with the assistance of users. Please consid
 - [Kevin-0u](https://github.com/Kevin-0u) for contributing support for Drexma WiStat thermostat and Amantii Bespoke fireplace.
 - [dorianmartinez31](https://github.com/dorianmartinez31) for contributing support for GTS8-40 2P circuit breaker.
 - [jayPare](https://github.com/jayPare) for contributing support for Hornbill Y4 keypad lock.
-- [pacorola](https://github.com/pacorola) for contributing support for Ferco GN1 RF thermostat.
+- [pacorola](https://github.com/pacorola) for contributing support for Ferco GN1 RF thermostat and Kimex cinema screen.
 - [Paxy](https://github.com/Paxy) for contributing support for MT15/MT29 air quality box.
 - [jakealake18](https://github.com/jakealake18) for contributing improvements to Galaxy projector light.
 - [jmontane](https://github.com/jmontane) for contributing Catalan translations.
@@ -887,3 +887,30 @@ Further device support has been made with the assistance of users. Please consid
 - [muhhh0](https://github.com/muhhh0) for contributing improvements for Goodcell EV charger.
 - [Peck07](https://github.com/Peck07) for contributing improvements to Moebot S lawnmower.
 - [vvv2542](https://github.com/vvv2542) for contributing support for Atorch S1TW thermostat switch.
+- [kliutchenia](https://github.com/kliutchenia) for contributing support for QS-WIFI-C02 dual curtain module.
+- [JanOstrowka](https://github.com/JanOstrowka) for contributing support for Tonepie T1 Pro Max cat litter box.
+- [KillDozerX2](https://github.com/KillDozerX2) for contributing support for Honeywell Air Touch P2 air purifier.
+- [Sapd](https://github.com/Sapd) for contributing support for Teknopoint Idra Skiv air conditioner.
+- [wuhgit](https://github.com/wuhgit) for contributing support for SC116-WZ3A camera.
+- [Airey001](https://github.com/Airey001) for contributing support for Neo-A Duoqu cat litter box.
+- [Akira97One](https://github.com/Akira97One) for assisting with support for SMCM DDV-207 Doorbell Pro camera.
+- [hemersonfds](https://github.com/hemersonfds) for assisting with support for EARU EAEMP3C energy monitoring breaker.
+- [jldg](https://github.com/jldg) for assisting with support for Lumary A1 ceiling fan with light.
+- [julianguinard](https://github.com/julianguinard) for contributing support for Feyree portable EV charger.
+- [lemeshovich](https://github.com/lemeshovich) for contributing support for Haozee ZG-302ZM presence dual light switch.
+- [emmanuel-ferdman](https://github.com/emmanuel-ferdman) for contributing logging improvements.
+- [r3m0x](https://github.com/r3m0x) for contributing support for PTH9BW air quality monitor.
+- [JabeBRD](https://github.com/JabeBRD) for assisting with support for Avatto WHS20S climate IR remote.
+- [guruprasadah](https://github.com/guruprasadah) for contributing support for generic 5-speed fan controller.
+- [Zensonize](https://github.com/Zensonize) for contributing support for EWC02 air quality meter.
+- [Otte-S](https://github.com/Otte-S) for assisting with support for LSC Smart Connect Neon LED strip.
+- [Wob76](https://github.com/Wob76) for assisting with support for Sailesi litter box.
+- [Zycrannny](https://github.com/Zycrannny) for assisting with support for Prestige M3 ceiling fan with light.
+- [hcanIngo](https://github.com/hcanIngo) for contributing support for Powerworld PW040 water+air heat pump.
+- [amantia](https://github.com/amantia) for contributing improvements to Axen water+air heat pump.
+- [gmudrets](https://github.com/gmudrets) for assisting with support for Avatto CLS02 curtain with dual lights.
+- [ddave666](https://github.com/ddave666) for contributing support for TG Electro motion sensor.
+- [ladalochness](https://github.com/ladalochness) for contributing support for Tellur thermostat.
+- [Garthcz](https://github.com/Garthcz) for contributing support for TrueLife P3 and P7 air purifiers.
+- [devlucasc](https://github.com/devlucasc) for contributing support for Positivo keypad and voice locks.
+

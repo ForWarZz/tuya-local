@@ -340,6 +340,7 @@
                             "fresh": "Segar",
                             "smart": "Pintar",
                             "strong": "Kencang",
+                            "custom": "Kustom",
                             "high": "Tinggi",
                             "medium": "Sedang",
                             "low": "Rendah",
@@ -504,6 +505,9 @@
                 "state": {
                     "cancel": "Batal",
                     "continuous": "Terus menerus",
+                    "30s": "30 detik",
+                    "1m": "1 menit",
+                    "2m": "2 menit",
                     "5m": "5 menit",
                     "10m": "10 menit",
                     "20m": "20 menit",
@@ -753,6 +757,25 @@
         "text": {
             "scene": {
                 "name": "Adegan"
+            }
+        },
+        "water_heater": {
+            "water_air": {
+                "name": "Pemanas air",
+                "state_attributes": {
+                    "operation_mode": {
+                        "state": {
+                            "heat": "Pemanas",
+                            "cool": "Pendingin",
+                            "auto": "Otomatis",
+                            "off": "Mati",
+                            "hotwater": "Air panas",
+                            "hotwater_cool": "Pendingin air panas",
+                            "hotwater_heat": "Pemanas air panas",
+                            "hotwater_auto": "Otomatis air panas"
+                        }
+                    }
+                }
             }
         }
     }
