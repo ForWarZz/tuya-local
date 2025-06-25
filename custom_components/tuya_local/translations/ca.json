@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Aire condicionat",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Escalfador",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Nivell de calefacció",
@@ -429,7 +431,12 @@
                     "starting": "Inici",
                     "emptying": "Buidat",
                     "resetting": "Reinicialització",
-                    "reverse": "Inversió"
+                    "reverse": "Inversió",
+                    "full": "Ple",
+                    "empty": "Buit",
+                    "missing": "Falta",
+                    "formatting": "Formatant",
+                    "unformatted": "No formatat"
                 }
             },
             "time_remaining": {
@@ -554,6 +561,24 @@
                     "off": "Desactivat",
                     "on": "Activat",
                     "memory": "Memòria"
+                }
+            },
+            "kettle_mode": {
+                "name": "Mode de bullidor",
+                "state": {
+                    "off": "Apagat",
+                    "heat": "Escalfament",
+                    "boil": "Ebullició",
+                    "quick_heat": "Calor ràpida",
+                    "quick_boil": "Ebullició ràpida",
+                    "keep_warm": "Conserva l'escalfor",
+                    "custom": "Personalitzat",
+                    "dechlorinate": "Descloració",
+                    "black_tea": "Te negre",
+                    "green_tea": "Te verd",
+                    "coffee": "Cafè",
+                    "honey_water": "Aigua amb mel",
+                    "infant_formula": "Fórmula infantil"
                 }
             },
             "language": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Bullidor d'aigua"
             }
         }
     }

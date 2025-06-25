@@ -165,6 +165,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "ایئر کنڈیشنر",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -220,6 +221,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "ہیٹر",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "حرارت کی سطح",
@@ -427,6 +429,24 @@
                     "off": "آف",
                     "on": "آن",
                     "memory": "یاد"
+                }
+            },
+            "kettle_mode": {
+                "name": "کیٹل موڈ",
+                "state": {
+                    "off": "آف",
+                    "heat": "گرم",
+                    "boil": "ابالنا",
+                    "quick_heat": "فوری گرم",
+                    "quick_boil": "فوری ابالنا",
+                    "keep_warm": "گرم رکھنا",
+                    "custom": "اپنی مرضی",
+                    "dechlorinate": "ڈی کلورینیٹ",
+                    "black_tea": "کالی چائے",
+                    "green_tea": "سبز چائے",
+                    "coffee": "کافی",
+                    "honey_water": "شہد پانی",
+                    "infant_formula": "بچہ فارمولا"
                 }
             },
             "language": {
@@ -679,7 +699,12 @@
                     "starting": "شروع ہو رہا ہے",
                     "emptying": "خالی کرنا",
                     "resetting": "ری سیٹ کرنا",
-                    "reverse": "الٹا"
+                    "reverse": "الٹا",
+                    "full": "مکمل",
+                    "empty": "خالی",
+                    "missing": "غائب",
+                    "formatting": "فارمیٹنگ",
+                    "unformatted": "غیر شکل بند"
                 }
             },
             "time_remaining": {
@@ -779,6 +804,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "کیٹل"
             }
         }
     }

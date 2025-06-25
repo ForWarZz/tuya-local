@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Klimaanlage",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Heizung",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Heizstufe",
@@ -423,6 +425,24 @@
                     "off": "Aus",
                     "on": "An",
                     "memory": "Speicher"
+                }
+            },
+            "kettle_mode": {
+                "name": "Kesselmodus",
+                "state": {
+                    "off": "Aus",
+                    "heat": "Heizen",
+                    "boil": "Kochen",
+                    "quick_heat": "Schnellheizen",
+                    "quick_boil": "Schnellkochen",
+                    "keep_warm": "Warmhalten",
+                    "custom": "Benutzerdefiniert",
+                    "dechlorinate": "Entchlorieren",
+                    "black_tea": "Schwarzer Tee",
+                    "green_tea": "Grüner Tee",
+                    "coffee": "Kaffee",
+                    "honey_water": "Honigwasser",
+                    "infant_formula": "Babynahrung"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "Starten",
                     "emptying": "Leeren",
                     "resetting": "Zurücksetzen",
-                    "reverse": "Rückwärts"
+                    "reverse": "Rückwärts",
+                    "full": "Voll",
+                    "empty": "Leer",
+                    "missing": "Fehlend",
+                    "formatting": "Formatieren",
+                    "unformatted": "Unformatiert"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Wasserkocher"
             }
         }
     }

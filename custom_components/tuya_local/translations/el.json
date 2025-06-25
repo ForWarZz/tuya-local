@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Κλιματιστικό",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Θέρμανση",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Επίπεδο θέρμανσης",
@@ -424,6 +426,24 @@
                     "on": "Ενεργοποίηση",
                     "off": "Απενεργοποίηση",
                     "memory": "Μνήμη"
+                }
+            },
+            "kettle_mode": {
+                "name": "Λειτουργία βραστήρα",
+                "state": {
+                    "off": "Απενεργοποίηση",
+                    "heat": "Θέρμανση",
+                    "boil": "Βράσιμο",
+                    "quick_heat": "Γρήγορη θέρμανση",
+                    "quick_boil": "Γρήγορο βράσιμο",
+                    "keep_warm": "Διατήρηση θερμοκρασίας",
+                    "custom": "Προσαρμοσμένο",
+                    "dechlorinate": "Αποχλωρίωση",
+                    "black_tea": "Μαύρο τσάι",
+                    "green_tea": "Πράσινο τσάι",
+                    "coffee": "Καφές",
+                    "honey_water": "Νερό με μέλι",
+                    "infant_formula": "Γάλα για μωρά"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "Εκκίνηση",
                     "emptying": "Αδειάζει",
                     "resetting": "Επαναφορά",
-                    "reverse": "Αντίστροφο"
+                    "reverse": "Αντίστροφο",
+                    "full": "Πλήρες",
+                    "empty": "Άδειο",
+                    "missing": "Ελλιπές",
+                    "formatting": "Μορφοποίηση",
+                    "unformatted": "Μη μορφοποιημένο"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Βραστήρας"
             }
         }
     }

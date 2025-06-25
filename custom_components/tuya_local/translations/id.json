@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "AC",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Pemanas",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Level Pemanasan",
@@ -424,6 +426,24 @@
                     "off": "Mati",
                     "on": "Hidup",
                     "memory": "Memori"
+                }
+            },
+            "kettle_mode": {
+                "name": "Mode ketel",
+                "state": {
+                    "off": "Mati",
+                    "heat": "Pemanas",
+                    "boil": "Mendidih",
+                    "quick_heat": "Pemanasan cepat",
+                    "quick_boil": "Mendidih cepat",
+                    "keep_warm": "Tetap hangat",
+                    "custom": "Kustom",
+                    "dechlorinate": "Deklorinasi",
+                    "black_tea": "Teh hitam",
+                    "green_tea": "Teh hijau",
+                    "coffee": "Kopi",
+                    "honey_water": "Air madu",
+                    "infant_formula": "Susu formula bayi"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "Memulai",
                     "emptying": "Mengosongkan",
                     "resetting": "Merestart",
-                    "reverse": "Mundur"
+                    "reverse": "Mundur",
+                    "full": "Penuh",
+                    "empty": "Kosong",
+                    "missing": "Hilang",
+                    "formatting": "Memformat",
+                    "unformatted": "Belum diformat"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Ketel"
             }
         }
     }

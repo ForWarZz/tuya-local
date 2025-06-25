@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "空调",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "加热器",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "加热水平",
@@ -424,6 +426,24 @@
                     "off": "关闭",
                     "on": "打开",
                     "memory": "记忆"
+                }
+            },
+            "kettle_mode": {
+                "name": "电热水壶模式",
+                "state": {
+                    "off": "关闭",
+                    "heat": "加热",
+                    "boil": "煮沸",
+                    "quick_heat": "快速加热",
+                    "quick_boil": "快速煮沸",
+                    "keep_warm": "保温",
+                    "custom": "自定义",
+                    "dechlorinate": "除氯",
+                    "black_tea": "红茶",
+                    "green_tea": "绿茶",
+                    "coffee": "咖啡",
+                    "honey_water": "蜂蜜水",
+                    "infant_formula": "婴儿配方"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "启动中",
                     "emptying": "排空中",
                     "resetting": "重置中",
-                    "reverse": "反转中"
+                    "reverse": "反转中",
+                    "full": "已满",
+                    "empty": "已空",
+                    "missing": "缺失",
+                    "formatting": "格式化中",
+                    "unformatted": "未格式化"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "电热水壶"
             }
         }
     }

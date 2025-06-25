@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Air conditioner",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Heater",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Heating level",
@@ -424,6 +426,24 @@
                     "off": "Off",
                     "on": "On",
                     "memory": "Memory"
+                }
+            },
+            "kettle_mode": {
+                "name": "Kettle mode",
+                "state": {
+                    "off": "Off",
+                    "heat": "Heat",
+                    "boil": "Boil",
+                    "quick_heat": "Quick heat",
+                    "quick_boil": "Quick boil",
+                    "keep_warm": "Keep warm",
+                    "custom": "Custom",
+                    "dechlorinate": "Dechlorinate",
+                    "black_tea": "Black tea",
+                    "green_tea": "Green tea",
+                    "coffee": "Coffee",
+                    "honey_water": "Honey water",
+                    "infant_formula": "Infant formula"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "Starting",
                     "emptying": "Emptying",
                     "resetting": "Resetting",
-                    "reverse": "Reverse"
+                    "reverse": "Reverse",
+                    "full": "Full",
+                    "empty": "Empty",
+                    "missing": "Missing",
+                    "formatting": "Formatting",
+                    "unformatted": "Unformatted"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Kettle"
             }
         }
     }

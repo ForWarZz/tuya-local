@@ -163,6 +163,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Klimaanlegg",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -218,6 +219,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Varmeapparat",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Varme nivå",
@@ -425,6 +427,24 @@
                     "off": "Av",
                     "on": "På",
                     "memory": "Minne"
+                }
+            },
+            "kettle_mode": {
+                "name": "Kjelemodus",
+                "state": {
+                    "off": "Av",
+                    "heat": "Varm",
+                    "boil": "Kok",
+                    "quick_heat": "Kjapp varming",
+                    "quick_boil": "Kjapp koking",
+                    "keep_warm": "Hold varm",
+                    "custom": "Egendefinert",
+                    "dechlorinate": "Avkalkning",
+                    "black_tea": "Svart te",
+                    "green_tea": "Grønn te",
+                    "coffee": "Kaffe",
+                    "honey_water": "Honningvann",
+                    "infant_formula": "Barnemat"
                 }
             },
             "language": {
@@ -677,7 +697,12 @@
                     "starting": "Starter",
                     "emptying": "Tømming",
                     "resetting": "Tilbakestilling",
-                    "reverse": "Revers"
+                    "reverse": "Revers",
+                    "full": "Full",
+                    "empty": "Tom",
+                    "missing": "Manglende",
+                    "formatting": "Formatering",
+                    "unformatted": "Uformaterte"
                 }
             },
             "time_remaining": {
@@ -777,6 +802,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Vannkoker"
             }
         }
     }

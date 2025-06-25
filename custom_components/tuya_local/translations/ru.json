@@ -162,6 +162,7 @@
         },
         "climate": {
             "aircon_extra": {
+                "name": "Кондиционер",
                 "state_attributes": {
                     "fan_mode": {
                         "state": {
@@ -217,6 +218,7 @@
                 }
             },
             "swing_as_powerlevel": {
+                "name": "Обогреватель",
                 "state_attributes": {
                     "swing_mode": {
                         "name": "Уровень нагрева",
@@ -424,6 +426,24 @@
                     "off": "Выкл",
                     "on": "Вкл",
                     "memory": "Память"
+                }
+            },
+            "kettle_mode": {
+                "name": "Режим чайника",
+                "state": {
+                    "off": "Выкл",
+                    "heat": "Нагрев",
+                    "boil": "Кипячение",
+                    "quick_heat": "Быстрый нагрев",
+                    "quick_boil": "Быстрое кипячение",
+                    "keep_warm": "Поддержание тепла",
+                    "custom": "Пользовательский",
+                    "dechlorinate": "Дехлорирование",
+                    "black_tea": "Черный чай",
+                    "green_tea": "Зеленый чай",
+                    "coffee": "Кофе",
+                    "honey_water": "Медовая вода",
+                    "infant_formula": "Детская смесь"
                 }
             },
             "language": {
@@ -676,7 +696,12 @@
                     "starting": "Запуск",
                     "emptying": "Опорожнение",
                     "resetting": "Сброс",
-                    "reverse": "Реверс"
+                    "reverse": "Реверс",
+                    "full": "Полный",
+                    "empty": "Пустой",
+                    "missing": "Отсутствует",
+                    "formatting": "Форматирование",
+                    "unformatted": "Не отформатировано"
                 }
             },
             "time_remaining": {
@@ -776,6 +801,9 @@
                         }
                     }
                 }
+            },
+            "kettle": {
+                "name": "Чайник"
             }
         }
     }
